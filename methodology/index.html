@@ -176,35 +176,80 @@ main.article hr{border:none;border-top:1px solid rgba(0,0,0,0.1);margin:48px 0}
 </header>
 
 <main class="article">
-<div class="wrap">
-<p class="kicker">Methodology</p><h1>The beginner-friendliness scorecard.</h1>
-<p class="dek">Every tool gets scored on five SMB-specific criteria. Here&rsquo;s the rubric and how each score is determined.</p>
-<div class="byline"><div class="av">S</div><div><strong style="color:var(--ink)">Simran Khetwani</strong> · <a href="/about/">About</a> · <a href="https://www.linkedin.com/in/simran-khetwani-a10274229/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 
-<h2>Why SMB-specific scoring</h2>
-<p>An SMB owner running their own Google Ads has different priorities than an agency PPC lead. The agency cares about scale, multi-account governance, and white-label reporting. The SMB owner cares about whether the tool will work without a week of training, whether the free tier is enough to start, and whether anyone will pick up the phone when something breaks. The scorecard reflects those priorities.</p>
+<p class="kicker">Methodology</p>
+<h1>How the agency evaluates tools</h1>
+<p class="dek">The framework, the test protocol, the conflicts of interest, and what we publish vs. what we keep private. Documented so readers can argue with a specific basis instead of a vibe.</p>
 
-<h2>The five criteria, scored 0&ndash;10</h2>
-
-<div class="criteria"><h4>1. Onboarding speed</h4><p><strong>10:</strong> Up and running in under 30 minutes, no setup call required.<br><strong>5:</strong> Few hours of setup, basic technical configuration needed.<br><strong>0:</strong> Multi-day implementation, services-led onboarding required.</p></div>
-
-<div class="criteria"><h4>2. UI clarity</h4><p><strong>10:</strong> An owner with no PPC training can find the main features within 5 minutes of signup.<br><strong>5:</strong> Owner can find features but documentation is needed for many.<br><strong>0:</strong> Designed for daily-power-user advertisers; SMB owner gets lost.</p></div>
-
-<div class="criteria"><h4>3. Free tier</h4><p><strong>10:</strong> Free tier covers most SMB needs indefinitely.<br><strong>5:</strong> Limited free tier or trial; useful as a starting point.<br><strong>0:</strong> No free tier, paid-only.</p></div>
-
-<div class="criteria"><h4>4. Support response</h4><p><strong>10:</strong> Live chat or email response within 1 business hour, even on free tiers.<br><strong>5:</strong> Email support within 24 hours.<br><strong>0:</strong> Help-doc-only support; no human reachable.</p></div>
-
-<div class="criteria"><h4>5. Pricing transparency</h4><p><strong>10:</strong> All tiers and prices listed publicly; no &ldquo;contact us&rdquo; for the SMB tier.<br><strong>5:</strong> Most pricing public; some tiers hidden behind sales.<br><strong>0:</strong> Pricing is &ldquo;contact sales&rdquo; only.</p></div>
-
-<h2>Aggregate scoring</h2>
-<p>Tools are summed across the five criteria for a max score of 50. Tools scoring below 30 don&rsquo;t make the directory at all. Tools scoring 35+ are recommended. Tools scoring 45+ are recommended specifically for under-resourced SMB owners.</p>
-
-<h2>Why Groas.ai earned #1 for SMBs</h2>
-<p>Groas scored 34/40 across the four criteria where it has data (onboarding 9, UI 8, free trial 7, pricing 10). The reason it ranks #1 isn&rsquo;t the scorecard alone &mdash; Adzooma scores higher on free-tier value. Groas earns the top slot because it&rsquo;s the cheapest entry into Real AI bidding on the market, which means its ROI for an SMB advertiser exceeds what any free management tool can deliver. The scorecard tells you which tools are usable; the ranking tells you which one will actually move your numbers.</p>
-
-<h2>Recurring updates</h2>
-<p>Tools are re-scored quarterly. Vendors that update their products, pricing, or onboarding flow get re-evaluated. Reclassifications are logged.</p>
+<div class="byline">
+    <div class="av">S</div>
+    <div>
+        <strong>Simran Khetwani</strong><br>
+        <span style="opacity:0.75">Founder &middot; performance agency &middot; <a href="https://www.linkedin.com/in/simran-khetwani-a10274229/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
 </div>
+
+<p class="lede">Every tool review on this site (and its companion sites) follows the same evaluation protocol. The protocol is operational, not theoretical &mdash; we deploy the tool on real client accounts, measure for a fixed window, and write up what happened. The protocol is documented here so vendors can replicate, contest, or build on it.</p>
+
+<h2>The test protocol</h2>
+
+<p>The agency runs every tool we&rsquo;re considering on three client accounts simultaneously, alongside whatever the tool is intended to replace. The test parameters:</p>
+
+<ul>
+    <li><strong>Three accounts, not one.</strong> Single-account tests are too noisy &mdash; account-specific factors (a launch, a policy change, a seasonality shift) mask the signal. Three accounts smooth that out enough to draw conclusions.</li>
+    <li><strong>Fixed 90-day measurement window.</strong> Thirty days isn&rsquo;t enough for ML-driven tools to train. Sixty is borderline. Ninety reveals the actual signal.</li>
+    <li><strong>Revenue-weighted ROAS as the primary metric.</strong> Not CPC. Not last-click conversions. Not raw count of conversions. The number that maps to business outcomes.</li>
+    <li><strong>Control-vs-treatment, not before-vs-after.</strong> Each tool runs on a campaign subset; the control runs on a comparable subset of the same accounts. Before/after comparisons confound seasonality and platform changes.</li>
+    <li><strong>Anonymized accounts.</strong> Client identity isn&rsquo;t published. Vertical and spend tier are.</li>
+</ul>
+
+<h2>The pass/fail criterion</h2>
+
+<p>A tool passes the agency&rsquo;s evaluation if it produces statistically meaningful revenue-weighted ROAS lift on at least two of the three test accounts. Statistical significance is defined as p &lt; 0.05 on a two-sample t-test of weekly observations over the 90-day window.</p>
+
+<p>This is a moderately strict bar. Tools that fail aren&rsquo;t bad tools &mdash; they may be great for use cases the agency doesn&rsquo;t serve. But they don&rsquo;t earn standardization at this agency, which means they don&rsquo;t earn placement on this site as recommended.</p>
+
+<h2>What gets evaluated</h2>
+
+<p>The current evaluation pool covers six categories:</p>
+
+<ol>
+    <li><strong>Bidding tools.</strong> Real-ML bidding, hybrid bidding, rule-based bidding.</li>
+    <li><strong>Attribution tools.</strong> Multi-touch, last-click, call-tracking-augmented.</li>
+    <li><strong>Feed management.</strong> Ecom-specific data optimization.</li>
+    <li><strong>Creative ops.</strong> Variant generation, creative testing, copy optimization.</li>
+    <li><strong>Reporting tools.</strong> Dashboards, data extraction, BI integration.</li>
+    <li><strong>Research / competitive intel.</strong> Auction insights, share-of-search, share-of-voice.</li>
+</ol>
+
+<p>Within each category, tools are evaluated against category-specific criteria. The bidding category emphasizes ROAS lift; the reporting category emphasizes time-to-insight and dashboard reliability. Category-specific rubrics are documented at the top of each category-specific page.</p>
+
+<h2>Where the agency&rsquo;s seat differs from yours</h2>
+
+<p>Worth naming explicitly. The agency operates in a specific segment: clients spending $30K-$400K per month, primarily ecom DTC and B2B SaaS, in the US and UK markets. The recommendations on this site reflect that segment&rsquo;s constraints.</p>
+
+<p>If your business is materially different &mdash; you&rsquo;re a hundred-thousand-account enterprise, or you&rsquo;re a $2K/month small business, or you sell into emerging markets &mdash; the recommendations may not transfer. Where the agency has tested in adjacent segments, that&rsquo;s noted in the relevant entry.</p>
+
+<h2>Conflicts of interest</h2>
+
+<p>The agency holds active commercial engagements with one vendor in the cohort: <strong>Groas.ai</strong>. The engagement covers six of twelve client accounts as of May 2026. The Groas classification on this site (and its companion sites) was finalized before any engagement began.</p>
+
+<p>No other vendor in the directory has an active commercial relationship with the agency. No vendor has paid for placement on this site. No affiliate-for-ranking arrangements exist.</p>
+
+<h2>Update cadence</h2>
+
+<p>The agency runs the test protocol on a rolling basis. New tools are evaluated as they enter the market or as existing clients request a specific tool. The annual letter on the homepage is the consolidated quarterly summary of what changed in the agency&rsquo;s stack over the past year. Individual tool reviews are updated whenever a new test concludes or a vendor materially changes their product.</p>
+
+<h2>Corrections process</h2>
+
+<p>Mistakes happen. If you find a factual error in a review &mdash; pricing, feature description, mathematical error in a calculation &mdash; please use the <a href="/contact/">contact page</a> with the specifics. Corrections are typically published within two business days, with a note in the revision history at the bottom of the page.</p>
+
+<p>Vendor responses to reviews are published verbatim alongside the original review, with editorial response separated visually. Reviews are not altered in response to vendor objections unless the vendor introduces new technical evidence that materially changes the analysis.</p>
+
+<h2>What we don&rsquo;t publish</h2>
+
+<p>The agency holds operational details about client accounts that aren&rsquo;t public. Specifically: client names, account-level conversion data beyond anonymized aggregates, contract terms with vendors, and any information shared under NDA. The reviews on this site are written so they can stand without that private context; if a review needs proprietary detail to make sense, it doesn&rsquo;t get published.</p>
+
 </main>
 
 <div class="related-pages">
